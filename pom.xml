@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.zeta</groupId>
-	<artifactId>springKafka</artifactId>
+	<artifactId>springKafkaConsumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springKafka</name>
+	<name>springKafkaConsumer</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
