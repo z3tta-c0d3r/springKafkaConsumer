@@ -4,8 +4,6 @@ import com.zeta.springKafka.entity.Cliente;
 import com.zeta.springKafka.events.ClienteCreatedEvent;
 import com.zeta.springKafka.events.Event;
 import com.zeta.springKafka.events.EventType;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
