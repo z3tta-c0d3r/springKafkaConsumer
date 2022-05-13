@@ -1,0 +1,11 @@
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\entity\Cliente.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\controller\command\ApacheKafkaWebController.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\events\EventType.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\service\impl\ClienteServiceImpl.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\events\ClienteCreatedEvent.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\service\ClienteEventsService.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\events\Event.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\dto\request\ClienteRequestCommand.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\service\ClienteService.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\config\KafkaProducerConfig.java
+C:\Inetum\Zeta\Repositorio\springKafkaConsumer\src\main\java\com\zeta\springKafka\SpringKafkaApplication.java
