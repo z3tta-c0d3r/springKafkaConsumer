@@ -1,3 +1,5 @@
 topic:
   cliente:
     name: test
+server:
+  port: 8082
