@@ -4,8 +4,10 @@ import com.zeta.springKafka.entity.Cliente;
 import com.zeta.springKafka.events.ClienteCreatedEvent;
 import com.zeta.springKafka.events.Event;
 import com.zeta.springKafka.events.EventType;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -13,21 +15,17 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Component
+@Slf4j
 public class ClienteEventsService extends Event<Cliente>{
-    @Autowired
-    private KafkaTemplate<String, Event<?>> producer;
 
-    @Value("${topic.cliente.name}")
-    private String topicCliente;
+    @KafkaListener(topics = "${topic.customer.name:customers}", containerFactory = "kafkaListenerContainerFactory", groupId = "grupo1")
+    public void consumer(Event<?> event) {
+        if (event.getClass().isAssignableFrom(ClienteCreatedEvent.class)) {
+            ClienteCreatedEvent customerCreatedEvent = (ClienteCreatedEvent) event;
+            log.info("Received customerCreatedEvent .... with Id={}, data={}",
+                    customerCreatedEvent.getId(),
+                    customerCreatedEvent.getData().toString());
+        }
 
-    public void publish(Cliente cliente) {
-
-        ClienteCreatedEvent created = new ClienteCreatedEvent();
-        created.setData(cliente);
-        created.setId(UUID.randomUUID().toString());
-        created.setType(EventType.CREATED);
-        created.setDate(LocalDate.now());
-
-        this.producer.send(topicCliente, created);
     }
 }
