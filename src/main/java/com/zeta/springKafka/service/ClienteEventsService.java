@@ -18,7 +18,7 @@ import java.util.UUID;
 @Slf4j
 public class ClienteEventsService extends Event<Cliente>{
 
-    @KafkaListener(topics = "${topic.customer.name:customers}", containerFactory = "kafkaListenerContainerFactory", groupId = "grupo1")
+    @KafkaListener(topics = "${topic.cliente.name:test}", containerFactory = "kafkaListenerContainerFactory", groupId = "grupo1")
     public void consumer(Event<?> event) {
         if (event.getClass().isAssignableFrom(ClienteCreatedEvent.class)) {
             ClienteCreatedEvent customerCreatedEvent = (ClienteCreatedEvent) event;
